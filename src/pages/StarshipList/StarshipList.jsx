@@ -15,14 +15,13 @@ const StarshipList = () => {
     fetchStarshipData()
   }, [])
   return (
-    <>
-  
+    <div class="card-container">
       {starships.map(starship =>
-        <Link key={starship.name} to='/starship' state={{ starship }}>
+        <Link key={starship.name} to='/starship' state={{ starship }}     class='card'>
           {starship.name}
         </Link>
       )}
-    </>
+    </div>
   )
 }
 

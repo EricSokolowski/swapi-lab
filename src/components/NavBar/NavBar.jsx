@@ -1,7 +1,9 @@
 const NavBar = () => {
   return (
     <>
-      <h2>Ships</h2>
+      <div className="nav">
+        <h2>STAR WARS STARSHIPS</h2>
+      </div>
     </>
   )
 }

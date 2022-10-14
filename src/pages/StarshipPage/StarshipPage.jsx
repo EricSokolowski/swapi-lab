@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 const StarshipPage = () => {
   const [shipDetails, setShipDetails] = useState({})
   const location = useLocation()
+
   useEffect(() => {
     const fetchShipDetails = async () => {
       const shipDetails = await getDetails(location.state.starship.url)
@@ -15,12 +16,14 @@ const StarshipPage = () => {
   }, [location.state.starship.url])
   return (
     <>
-      <div>
+      <div class='detail-container'>
         {shipDetails.name ?
           <>
-            <h2>{shipDetails.name}</h2>
-            <h2>{shipDetails.model}</h2>
-            <Link to='/'>Return</Link>
+            <div class='info-container'>
+              <h2>NAME: {shipDetails.name}</h2>
+              <h2>MODEL: {shipDetails.model}</h2>
+              <Link to='/'>RETURN</Link>
+            </div>
           </>
           :
           <>

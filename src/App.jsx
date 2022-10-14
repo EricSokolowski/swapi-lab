@@ -7,11 +7,13 @@ import StarshipPage from './pages/StarshipPage/StarshipPage'
 function App() {
   return (
   <>
-    <NavBar />
-    <Routes>
-    <Route path='/' element={<StarshipList />} />
-    <Route path='/starship' element={<StarshipPage />} />
-    </Routes>
+    <div class='app'>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<StarshipList />} />
+        <Route path='/starship' element={<StarshipPage />} />
+      </Routes>
+    </div>
   </>
   )
 }
